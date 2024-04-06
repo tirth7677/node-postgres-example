@@ -1,0 +1,52 @@
+For postgres 
+
+step 1: open "psql"
+
+step 2: to ensure you are connected write "\conninfo"
+postgres=# \conninfo
+You are connected to database "postgres" as user "postgres" on host "localhost" (address "::1") at port "5433".
+
+step 3: "\l" to show all database
+
+step 4: to create new database " CREATE DATABASE Students;"
+
+step 5: to connected to database  "\c students"
+You are now connected to database "students" as user "postgres".
+
+step 6: clear screen "\! cls"
+
+step 7:  "CREATE TABLE students (" create new table in students
+
+step 8: "ID SERIAL PRIMARY KEY," id serial mean auto incremental and primary KEY
+
+students=# CREATE TABLE students (
+students(# ID SERIAL PRIMARY KEY,
+students(# name VARCHAR(255),
+students(# email VARCHAR(255),
+students(# age INT,
+students(# dob DATE);
+CREATE TABLE
+
+
+"display table"
+students=# \dt
+          List of relations
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | students | table | postgres
+(1 row)
+
+"DROP TABLE students;" to delete table
+
+
+students=# INSERT INTO students (name,email,age,dob)
+students-# VALUES ('Tirth','tirth890@gmail.com',20,'2001-09-20'), ('Dhyey','dhyey890@gmail.com',24,'2005-04-21');
+INSERT 0 2
+
+students=# SELECT * FROM students;
+ id | name  |       email        | age |    dob
+----+-------+--------------------+-----+------------
+  1 | Tirth | tirth890@gmail.com |  20 | 2001-09-20
+  2 | Dhyey | dhyey890@gmail.com |  24 | 2005-04-21
+(2 rows)
+
